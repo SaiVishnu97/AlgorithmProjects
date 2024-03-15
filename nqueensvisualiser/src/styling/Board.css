@@ -1,0 +1,87 @@
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    border: 10px solid grey;
+    width: fit-content;
+    position: relative;
+    margin: 10%;
+    margin-left: 30%;
+  }
+  
+  .square {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .light {
+    background-color: #f0d9b5;
+  }
+  
+  .dark {
+    background-color: #b58863;
+  }
+  
+  .board-row {
+    display: flex;
+  }
+/* Add this to your Board.css or create a new CSS file */
+/* .square {
+  position: relative;
+} */
+/* 
+.fa-queen {
+  font-size: 0;
+  opacity: 0;
+  transform: translateX(-20px); 
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+} */
+
+/* .square.show-queen  */
+/* .fa-queen {
+  font-size: 30px;
+  opacity: 1;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transform: translateX(0); /* Move to the original position 
+} */
+.fa-queen 
+{
+  animation: lefttoright 0.05s ease-in-out;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+@keyframes lefttoright {
+   0%
+   {
+    transform: translateX(-100%);
+    opacity:0
+   }
+   100%
+   {
+      transform: translateX(0%);
+      opacity: 1;
+   }
+}
+
+#queen 
+{
+  animation: righttoleft 0.05s ease-in-out;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+}
+@keyframes rigthtoleft {
+   0%
+   {
+    transform: translateX(0%);
+    font-size: 30px;
+    opacity: 1;
+   }
+   100%
+   {
+      transform: translateX(-100%);
+      font-size: 0px;
+      opacity: 0;
+   }
+}
+  
