@@ -14,7 +14,6 @@ function Input({setIsSizeTaken}) {
         }
         else
         {
-            console.log("No not a valid size number")
             setIsValidInput(false)
         }
     };

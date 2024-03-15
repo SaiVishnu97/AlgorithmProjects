@@ -27,7 +27,6 @@ async function nqueens(res,tempres,row,n)
     if(row===n)
     {   
         //res.push(tempres.map((val)=>[...val]))
-        console.log(row)
         return true
     }
     for(let i=0;i<n;i++)
@@ -56,7 +55,6 @@ export var solveNQueens = async function(n) {
     for(let i=0;i<n;i++)
     {
         tempres.push(Array.from({length:n},()=>'.'))
-        console.log("Size is updated")
     }
    await nqueens(res,tempres,0,n)
     // return res;
